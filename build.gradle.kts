@@ -46,11 +46,14 @@ tasks.withType<Test> {
 
 sonarqube {
 	properties {
+		// プロジェクトキー
 		property("sonar.projectKey", "demo")
+		//　サーバーURL
 		property("sonar.host.url", "http://localhost:9000")
+		// xml形式のテストレポートの場所を指定
 		property("sonar.junit.reportPaths", "build/test-results/test")
+		//　JaCoCoカバレッジレポートの場所を指定
 		property("sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/test/jacocoTestReport.xml")
-		property("sonar.exclusions", "src/test/**/*")
 	}
 }
 
